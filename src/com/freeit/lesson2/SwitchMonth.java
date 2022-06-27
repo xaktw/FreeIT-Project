@@ -13,9 +13,12 @@ public class SwitchMonth {
         Scanner in = new Scanner(System.in);
         System.out.println("Пожалуйста нажмите число месяца : ");
         int month = in.nextInt();
-        System.out.println("месяц цифру которого вы нажали: " + monthOfYear(month));
+        System.out.println("месяц цифру которого вы нажали: " + monthOfYear(month)+ " пора года : "+ seasonOfYear(month));
     }
 
+    /**
+     * блок выбора месяца
+     */
     public static String monthOfYear(int month){
         switch (month){
 
@@ -58,6 +61,32 @@ public class SwitchMonth {
             default ->{
               return"нет такого месяца";
             }
+
         }
+
+    }
+
+    /**
+     * блок выбора :  времена года
+     */
+    public static String seasonOfYear (int month) {
+        switch (month){
+            case 12, 1 ,2 -> {
+                return "Зима";
+            }
+            case 3,4,5 -> {
+                return "Весна";
+            }
+            case 6,7,8 -> {
+                return "Лето";
+            }
+            case 9,10,11 -> {
+                return "Осень";
+            }
+            default -> {
+                return " пора года не соответствует ";
+            }
+        }
+
     }
 }
