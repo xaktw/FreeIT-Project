@@ -17,8 +17,8 @@ public class NameSexAge {
         System.out.println("Введите ваш возраст: ");
         int age = in.nextInt();
         System.out.println(sex(name));
-        System.out.println("Ваш возраст составляет : " + age + " year");
-        System.out.println("SERVER: " + ageStage(age));
+        System.out.println("Ваш возраст составляет : " + age + " year, " + ageStage(age) );
+        // System.out.println("SERVER: " + ageStage(age));
     }
     /**
      * блок возрастного ограничения
