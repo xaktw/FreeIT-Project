@@ -19,12 +19,10 @@ public class Result {
         boolean res2 = a < b;
         if (res1) {
             System.out.println(a + " > " + +b);
+        } else if (res2){
+            System.out.println(a + "<" + b);
         } else {
-            if (res2) {
-                System.out.println(a + "<" + b);
-            } else {
-                System.out.println(a + "=" + b);
-            }
+            System.out.println(a + "=" + b);
         }
     }
 }
