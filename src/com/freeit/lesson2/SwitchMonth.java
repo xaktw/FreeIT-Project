@@ -13,7 +13,8 @@ public class SwitchMonth {
         Scanner in = new Scanner(System.in);
         System.out.println("Пожалуйста нажмите число месяца : ");
         int month = in.nextInt();
-        System.out.println("месяц цифру которого вы нажали: " + monthOfYear(month)+ " пора года : "+ seasonOfYear(month));
+        System.out.println ( "месяц цифру которого вы нажали: " + monthOfYear(month)+"\n"
+                +" пора года : "+ seasonOfYear(month));
     }
 
     /**
