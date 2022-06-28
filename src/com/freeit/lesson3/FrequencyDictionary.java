@@ -1,6 +1,7 @@
 package com.freeit.lesson3;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -17,26 +18,29 @@ public class FrequencyDictionary {
      * - посчитать сколько раз каждое слово встречается в предложении
      * и вывести результат в консоль
      */
-    public static void main(String[] args) {
-        System.out.println("Здраствуйте!" +"\n"+"Введите текст: ");
+    public static void main(String[] args)
+    {
+        System.out.println("Введите текст : ");
         Scanner in = new Scanner(System.in);
-        String text = in.nextLine();
-        String[] words = text.toLowerCase().replaceAll("[,.!:?]", "").split("\\s");
-        /**
-        toLowerCase Преобразует символы в строке в нижний регистр
-         */
+        String string = in.nextLine();
+        String[] words = string.toLowerCase().replaceAll("[,.!:?]", "").split("\\s");
         System.out.println("Слова из текста: " + Arrays.toString(words));
         /**
-         * Метод Arrays.toString() возвращает строковое представление одномерного массива, разделяя элементы запятой.
+         * HashMap - хеш-таблица хранения данных
+         * Map<String, Integer> hashMap = new HashMap<String, Integer>()
          */
-        for (int i = 0; i < words.length; i++) {
-            int countOfRepetition = 0;
-              for (int j = 0; j < words.length; j++) {
-                if (words[i].equals(words[j])) {
-                  countOfRepetition++;
-                }
-              }
-           System.out.println("Слово " + words[i] + " повторяется " + countOfRepetition + " раз(a).");
+        HashMap<String, Integer> wordToCount = new HashMap<>();
+        for (String word : words)
+        {
+            if (!wordToCount.containsKey(word))
+            {
+                wordToCount.put(word, 0);
+            }
+            wordToCount.put(word, wordToCount.get(word) + 1);
+        }
+        for (String word : wordToCount.keySet())
+        {
+            System.out.println(word + " " + wordToCount.get(word));
         }
     }
 }
