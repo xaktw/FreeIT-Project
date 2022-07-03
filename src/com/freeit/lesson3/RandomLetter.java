@@ -20,7 +20,7 @@ public class RandomLetter {
 
     public static void main(String[] args) {
 
-        System.out.println("Добро пожаловать игру 'отгадай букву'  " );
+        System.out.println("Добро пожаловать в игру 'отгадай букву'  " );
 
         /*
         блок создания произвольного числа
