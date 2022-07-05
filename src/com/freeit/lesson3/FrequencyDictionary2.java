@@ -1,8 +1,6 @@
 package com.freeit.lesson3;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Locale;
 import java.util.Scanner;
 
 /**
