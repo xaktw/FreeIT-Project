@@ -1,6 +1,5 @@
 package com.freeit.lesson3;
 
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -37,20 +36,20 @@ public class RandomLetter {
             System.out.println("Введите букву [от а до я ]: ");
             String userIn = in.nextLine().toLowerCase();
             char userLetter = userIn.charAt(0);
-            int Letter = userLetter;
-            if (Letter == hiddenLetter) {
+
+            if (userLetter == hiddenLetter) {
                 System.out.println("Поздравляем! Скрытая буква  '" + userLetter + "' Вы выйграли!");
                 endGame = true;
             } else {
-                int difference = Math.abs(Letter - hiddenLetter);
+                int difference = Math.abs(userLetter - hiddenLetter);
                 if (difference > 10) {
-                    System.out.println("холодно");
+                    System.out.println("холодно.. бррр");
                 } else if (difference > 5) {
-                    System.out.println("теплее");
+                    System.out.println("прохладно");
                 } else if (difference > 2) {
-                    System.out.println("горячо");
+                    System.out.println("теплее");
                 } else {
-                    System.out.println("очень даже рядом");
+                    System.out.println("горячо .. *_*");
                 }
             }
         }
