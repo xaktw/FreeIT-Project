@@ -25,7 +25,7 @@ public class Runner {
         notebook.ending= in.nextInt();
 
         notebook.rec();
-
+        System.out.println("");
     }
 
 }
