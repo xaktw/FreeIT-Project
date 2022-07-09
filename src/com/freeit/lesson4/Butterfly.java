@@ -45,7 +45,7 @@ public class Butterfly {
         stars[13][3]=true;stars[13][7]=true;stars[13][8]=true ;stars[13][9]=true ;stars[13][10]=true ;stars[13][11]=true ;stars[13][12]=true;stars[13][16]=true;
         stars[14][3]=true;stars[14][6]=true;stars[14][8]=true;stars[14][9]=true;stars[14][10]=true;stars[14][11]=true;stars[14][13]=true;stars[14][16]=true;
         stars[15][4]=true;stars[15][5]=true;stars[15][14]=true;stars[15][15]=true;
-
+        //
       // stars[16][]=true;stars[16][13]=true;
         for (int i = 0; i < stars.length; i++) {
             System.out.print("\n");
